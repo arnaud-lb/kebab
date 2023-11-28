@@ -115,13 +115,12 @@ class JsonUtils
             return false;
         }
 
-        try {
-            self::decodeArray($value);
-        } catch (JsonUtilsDecodeException $e) {
-            return false;
-        }
+        return null !== json_decode($value, true) || JSON_ERROR_NONE !== json_last_error();
+    }
 
-        return true;
+    public static function isValidJsonWithoutBypass(string $value): bool
+    {
+        return null !== json_decode($value, true) || JSON_ERROR_NONE !== json_last_error();
     }
 
     /** @return mixed */

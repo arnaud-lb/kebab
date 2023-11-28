@@ -27,6 +27,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.6",
         "phing/phing": "^2.16",
+        "phpbench/phpbench": "^1.2",
         "phpstan/phpstan": "^1.4.6",
         "phpstan/phpstan-beberlei-assert": "^1.0",
         "phpstan/phpstan-strict-rules": "^1.0",
